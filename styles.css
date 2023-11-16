@@ -1,0 +1,229 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Roboto+Mono:wght@200&family=Roboto:wght@300&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*Estilos de la barra de navegacion*/
+
+header{
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    background-color: white;
+    z-index: 1000;
+}
+
+#logo img{
+    width: 33px;
+    height: 32px;
+    padding: 6px;
+    margin: 0 0 0 28px;
+}
+
+#logo img:hover{
+    background-color: #E9E9E9;
+    border-radius: 150px;
+}
+
+#navbar-pinterest ul{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin-left: auto;
+}
+
+#navbar-pinterest li{
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Fira Sans", "Droid Sans";
+    font-weight: 600;
+    margin-left: 22px;
+}
+
+.principal{
+    width: 68px;
+    padding: 14px;
+    border-radius: 30px;
+    background-color: black;
+    color: white;
+}
+
+/*Barra de busqueda*/
+
+.finder{
+    width: 810px;
+    height: 47px;
+    background-color: rgb(228, 228, 228);
+    border: none;
+    outline: none;
+    border-radius: 30px;
+    padding-left: 40px;
+    font-size: 15px;
+}
+
+.finder:focus-within{
+    border: 4px solid #7FC1FF
+}
+
+.search-container{
+    position: relative;
+}
+
+.search-container i{
+    position: absolute;
+    left: 20px;
+    top: 30%;
+    transform: translate(-30%);
+    color: #3f3e3e;
+    font-size: 16px;
+}
+
+.icon-container{
+    padding: 8px;
+    font-size: 22px;
+    color: #4e4e4e;
+}
+
+.icon-container:hover{
+    background-color: #E9E9E9;
+    border-radius: 150px;
+}
+
+#profile img{
+    width: 30px;
+    border-radius: 50%;
+}
+
+#icon-chevron{
+    font-size: 14px;
+}
+
+#icon-chevron:hover{
+    background-color: #E9E9E9;
+    border-radius: 220px;
+}
+
+/*Esilos del contenedor de imagenes*/
+
+main#content{
+    position: absolute;
+    margin-top: 80px;
+    padding-right: 10px;
+}
+
+.images{
+    /*display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;*/
+
+    columns: 5 240px;
+    margin: auto;
+}
+
+.images .card-image{
+    position: relative;
+    padding: 16px;
+}
+
+.card-image img{
+    border-radius: 15px;
+    cursor: zoom-in;
+    object-fit: cover;
+}
+
+.card-image img:hover{
+    filter: brightness(60%);
+}
+
+.card-image:hover > * {
+    visibility: visible;
+    display: inline;
+}
+
+.profile-text{
+    position: absolute;
+    left: 13%;
+    top: 9%;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Fira Sans", "Droid Sans";
+    visibility: hidden;
+    display: none;
+}
+
+.icon-image{
+    position: absolute;
+    left: 35%;
+    top: 11%;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    visibility: hidden;
+    display: none;
+}
+
+.button{
+    position: absolute;
+    left: 60%;
+    top: 8%;
+    background-color: rgb(243, 59, 59);
+    padding: 14px;
+    border-radius: 40px;
+    border: none;
+    visibility: hidden;
+    display: none;
+}
+
+.images .card-image button a{
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Fira Sans", "Droid Sans";
+}
+
+.upload{
+    position: absolute;
+    left: 67%;
+    bottom: 9%;
+    background-color: #F0F0F0;
+    font-size: 16px;
+    border-radius: 30px;
+    color: #111111;
+    font-weight: bolder;
+    padding: 8px;
+    visibility: hidden;
+    display: none;
+}
+
+.doots{
+    position: absolute;
+    left: 80%;
+    bottom: 9%;
+    background-color: #F0F0F0;
+    font-size: 16px;
+    border-radius: 30px;
+    color: #111111;
+    font-weight: bolder;
+    padding: 8px;
+    visibility: hidden;
+    display: none;
+}
+
+.card-image .button {
+    z-index: 2;
+}
+
+.card-image .upload,
+.card-image .doots,
+.card-image .profile-text,
+.card-image .icon-image{
+    z-index: 1;
+}
+
+/*Medias query para sitio responsive*/
